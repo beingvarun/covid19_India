@@ -9,10 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var dateAndStatus: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+      
+        
+        dateAndStatus.text = "Covid 19 Analysis \(getTimeAndDate())" 
+    }
+    
+    func getTimeAndDate()->String{
+        let now = Date()
+
+              let formatter = DateFormatter()
+              formatter.dateStyle = .full
+              formatter.timeStyle = .full
+              let datetime = formatter.string(from: now)
+        return datetime
+        
+        
     }
 
 
