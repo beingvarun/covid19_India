@@ -11,12 +11,14 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var dateAndStatus: UILabel!
     
+    let covidManager = CovidManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
       
         
-        dateAndStatus.text = "Covid 19 Analysis \(getTimeAndDate())" 
+        dateAndStatus.text = "Covid 19 Analysis \(getTimeAndDate())"
+         getCurrentData()
     }
     
     func getTimeAndDate()->String{
@@ -28,8 +30,14 @@ class ViewController: UIViewController {
               let datetime = formatter.string(from: now)
         return datetime
         
+       
         
     }
+    
+    func getCurrentData(){
+        covidManager.getUrl()
+    }
+    
 
 
 }
