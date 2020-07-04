@@ -8,7 +8,13 @@
 
 import Foundation
 
+protocol CovidDataDelegate {
+    func updateCounts(covidData:CovidDataModel)
+}
 struct CovidManager {
+    
+    var delegate:CovidDataDelegate?
+    
     let covidUrl = "https://api.covidindiatracker.com/total.json"
     func getUrl(){
         let url = covidUrl
@@ -23,26 +29,33 @@ struct CovidManager {
                     print(error!)
                 }
                 if let safeData = data{
-                    self.parseJSON(covidData: safeData)
+                    if let updatedData = self.parseJSON(covidData: safeData){
+                        self.delegate?.updateCounts(covidData: updatedData)
+                    }
                 }
             }
             task.resume()
         }
     }
     
-    func parseJSON(covidData:Data){
+    func parseJSON(covidData:Data)->CovidDataModel?{
         let decoder = JSONDecoder()
         
         
         do {
             let decodedData = try decoder.decode(CovidJSON.self, from: covidData)
-            //getActive(activeData: decodedData.confirmed)
-            print(decodedData.active)
-            print(decodedData.recovered)
-            print(decodedData.deaths)
+            let confirmedData =  String(decodedData.confirmed)
+            let activeData = String(decodedData.active)
+            let recoveredData = String(decodedData.recovered)
+            let deceasedData = String(decodedData.deaths)
+            let myCovidData = CovidDataModel(active: activeData, confirmed: confirmedData, recovered: recoveredData, deceased: deceasedData)
+            return myCovidData
+            
         } catch {
             print(error)
+            return nil
         }
+        
         
     }
    

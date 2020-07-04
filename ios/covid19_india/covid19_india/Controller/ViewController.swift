@@ -8,15 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CovidDataDelegate {
+    func updateCounts(covidData: CovidDataModel) {
+        DispatchQueue.main.async {
+            self.confirmedLabel.text = """
+            Confirmed
+            \( covidData.confirmed)
+            """
+                
+               
+            self.activeLabel.text = """
+            Active
+            \( covidData.active)
+            """
+            self.deceasedLabel.text = """
+            Deceased
+            \( covidData.deceased)
+            """
+            self.recoveredLabel.text = """
+            Recovered
+            \( covidData.recovered)
+            """
+        }
+        
+        
+    }
+    
     @IBOutlet weak var dateAndStatus: UILabel!
     
-    let covidManager = CovidManager()
+    @IBOutlet weak var confirmedLabel: UILabel!
+    @IBOutlet weak var activeLabel: UILabel!
+    @IBOutlet weak var deceasedLabel: UILabel!
+    @IBOutlet weak var recoveredLabel: UILabel!
+    var covidManager = CovidManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
       
-        
+        covidManager.delegate = self
         dateAndStatus.text = "Covid 19 Analysis \(getTimeAndDate())"
          getCurrentData()
     }

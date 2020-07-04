@@ -13,6 +13,7 @@
 		8B05A967249FC9A9008E55E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B05A965249FC9A9008E55E2 /* Main.storyboard */; };
 		8B05A96C249FC9AE008E55E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B05A96A249FC9AE008E55E2 /* LaunchScreen.storyboard */; };
 		8B05A974249FD156008E55E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B05A973249FD156008E55E2 /* Assets.xcassets */; };
+		8B68A86824B102040035AB5A /* covidDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B68A86724B102040035AB5A /* covidDataModel.swift */; };
 		8BA5FC6A24AF49E700D396CD /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5FC6924AF49E700D396CD /* CovidManager.swift */; };
 		8BA5FC6C24AF695D00D396CD /* CovidJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */; };
 		D9F0812924ACC4F2009D4763 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9F0812724ACC4C1009D4763 /* Montserrat-Black.ttf */; };
@@ -44,6 +45,7 @@
 		8B05A96B249FC9AE008E55E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B05A96D249FC9AE008E55E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B05A973249FD156008E55E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../assets/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
+		8B68A86724B102040035AB5A /* covidDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = covidDataModel.swift; sourceTree = "<group>"; };
 		8BA5FC6924AF49E700D396CD /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
 		8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidJSON.swift; sourceTree = "<group>"; };
 		D9F0811724ACC4BE009D4763 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				8BA5FC6924AF49E700D396CD /* CovidManager.swift */,
 				8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */,
+				8B68A86724B102040035AB5A /* covidDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				8BA5FC6A24AF49E700D396CD /* CovidManager.swift in Sources */,
 				8B05A960249FC9A9008E55E2 /* AppDelegate.swift in Sources */,
 				8B05A962249FC9A9008E55E2 /* SceneDelegate.swift in Sources */,
+				8B68A86824B102040035AB5A /* covidDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
