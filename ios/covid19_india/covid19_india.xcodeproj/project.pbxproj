@@ -17,6 +17,8 @@
 		8B68A86824B102040035AB5A /* covidDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B68A86724B102040035AB5A /* covidDataModel.swift */; };
 		8BA5FC6A24AF49E700D396CD /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5FC6924AF49E700D396CD /* CovidManager.swift */; };
 		8BA5FC6C24AF695D00D396CD /* CovidJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */; };
+		8BDA9C3224D5708D00C2B908 /* StatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */; };
+		8BDA9C3324D5708D00C2B908 /* StatesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BDA9C3124D5708D00C2B908 /* StatesTableViewCell.xib */; };
 		D9F0812924ACC4F2009D4763 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9F0812724ACC4C1009D4763 /* Montserrat-Black.ttf */; };
 		D9F0812A24ACC4FC009D4763 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9F0812224ACC4C0009D4763 /* Montserrat-BlackItalic.ttf */; };
 		D9F0812B24ACC4FC009D4763 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9F0812024ACC4C0009D4763 /* Montserrat-Bold.ttf */; };
@@ -50,6 +52,8 @@
 		8B68A86724B102040035AB5A /* covidDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = covidDataModel.swift; sourceTree = "<group>"; };
 		8BA5FC6924AF49E700D396CD /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
 		8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidJSON.swift; sourceTree = "<group>"; };
+		8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewCell.swift; sourceTree = "<group>"; };
+		8BDA9C3124D5708D00C2B908 /* StatesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatesTableViewCell.xib; sourceTree = "<group>"; };
 		D9F0811724ACC4BE009D4763 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		D9F0811824ACC4BF009D4763 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		D9F0811924ACC4BF009D4763 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				8B0B1C1E24D548300027E544 /* StatesViewController.swift */,
+				8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */,
+				8BDA9C3124D5708D00C2B908 /* StatesTableViewCell.xib */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				D9F0813324ACC4FC009D4763 /* Montserrat-LightItalic.ttf in Resources */,
 				D9F0813524ACC4FC009D4763 /* Montserrat-MediumItalic.ttf in Resources */,
 				D9F0812D24ACC4FC009D4763 /* Montserrat-ExtraBold.ttf in Resources */,
+				8BDA9C3324D5708D00C2B908 /* StatesTableViewCell.xib in Resources */,
 				D9F0812A24ACC4FC009D4763 /* Montserrat-BlackItalic.ttf in Resources */,
 				8B05A967249FC9A9008E55E2 /* Main.storyboard in Resources */,
 				D9F0812F24ACC4FC009D4763 /* Montserrat-ExtraLight.ttf in Resources */,
@@ -273,6 +280,7 @@
 				8B0B1C1F24D548300027E544 /* StatesViewController.swift in Sources */,
 				8B05A964249FC9A9008E55E2 /* HomeController.swift in Sources */,
 				8BA5FC6C24AF695D00D396CD /* CovidJSON.swift in Sources */,
+				8BDA9C3224D5708D00C2B908 /* StatesTableViewCell.swift in Sources */,
 				8BA5FC6A24AF49E700D396CD /* CovidManager.swift in Sources */,
 				8B05A960249FC9A9008E55E2 /* AppDelegate.swift in Sources */,
 				8B05A962249FC9A9008E55E2 /* SceneDelegate.swift in Sources */,

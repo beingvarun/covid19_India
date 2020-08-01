@@ -10,10 +10,13 @@ import UIKit
 
 class StatesViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableView.register(UINib(nibName: "StatesTableViewCell", bundle: nil), forCellReuseIdentifier: "stateIdentifier")
     }
     
 
@@ -27,4 +30,23 @@ class StatesViewController: UIViewController {
     }
     */
 
+}
+
+
+
+extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "stateIdentifier", for: indexPath) as! StatesTableViewCell
+        //cell?.textLabel?.text = "kerala"
+        return cell
+    }
+    
+    
+    
+    
+    
 }
