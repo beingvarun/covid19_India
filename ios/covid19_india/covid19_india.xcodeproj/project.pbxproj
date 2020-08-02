@@ -15,6 +15,7 @@
 		8B05A974249FD156008E55E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B05A973249FD156008E55E2 /* Assets.xcassets */; };
 		8B0B1C1F24D548300027E544 /* StatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0B1C1E24D548300027E544 /* StatesViewController.swift */; };
 		8B68A86824B102040035AB5A /* covidDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B68A86724B102040035AB5A /* covidDataModel.swift */; };
+		8B6AD3E424D6D42B00FE91C1 /* StateDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AD3E324D6D42B00FE91C1 /* StateDataModel.swift */; };
 		8BA5FC6A24AF49E700D396CD /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5FC6924AF49E700D396CD /* CovidManager.swift */; };
 		8BA5FC6C24AF695D00D396CD /* CovidJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */; };
 		8BDA9C3224D5708D00C2B908 /* StatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */; };
@@ -52,6 +53,7 @@
 		8B05A973249FD156008E55E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../assets/AppIcons/Assets.xcassets; sourceTree = "<group>"; };
 		8B0B1C1E24D548300027E544 /* StatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewController.swift; sourceTree = "<group>"; };
 		8B68A86724B102040035AB5A /* covidDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = covidDataModel.swift; sourceTree = "<group>"; };
+		8B6AD3E324D6D42B00FE91C1 /* StateDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataModel.swift; sourceTree = "<group>"; };
 		8BA5FC6924AF49E700D396CD /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
 		8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidJSON.swift; sourceTree = "<group>"; };
 		8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				8BDA9C3124D5708D00C2B908 /* StatesTableViewCell.xib */,
 				8BF8431224D5CBE400AB346F /* StateManager.swift */,
 				8BF8431424D5E95A00AB346F /* StateData.swift */,
+				8B6AD3E324D6D42B00FE91C1 /* StateDataModel.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				8BF8431324D5CBE400AB346F /* StateManager.swift in Sources */,
 				8B0B1C1F24D548300027E544 /* StatesViewController.swift in Sources */,
 				8B05A964249FC9A9008E55E2 /* HomeController.swift in Sources */,
+				8B6AD3E424D6D42B00FE91C1 /* StateDataModel.swift in Sources */,
 				8BA5FC6C24AF695D00D396CD /* CovidJSON.swift in Sources */,
 				8BDA9C3224D5708D00C2B908 /* StatesTableViewCell.swift in Sources */,
 				8BF8431524D5E95A00AB346F /* StateData.swift in Sources */,

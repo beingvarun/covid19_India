@@ -9,7 +9,7 @@
 import Foundation
 
 struct StateData:Codable {
-    let statewise: [Statewise]
+    var statewise: [Statewise]
 }
 
 
@@ -19,4 +19,5 @@ struct Statewise :Codable {
     let confirmed : String
     let deaths: String
     let recovered : String
+    let statecode : String
 }

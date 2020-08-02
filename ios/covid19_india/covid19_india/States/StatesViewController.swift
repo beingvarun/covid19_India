@@ -12,16 +12,18 @@ class StatesViewController: UIViewController {
     
     var stateManager = StateManager()
     
+    var updated_CleanData:[StateDataModel]?
+    
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        stateManager.newdelegate = self
+              stateManager.getAPI()
         tableView.register(UINib(nibName: "StatesTableViewCell", bundle: nil), forCellReuseIdentifier: "stateIdentifier")
-        
-        stateManager.getAPI()
+      
         
         
     }
@@ -43,17 +45,27 @@ class StatesViewController: UIViewController {
 
 extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return updated_CleanData?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stateIdentifier", for: indexPath) as! StatesTableViewCell
-        //cell?.textLabel?.text = "kerala"
+        
+        if let total_Data = updated_CleanData{
+            cell.stateNameLabel.text = total_Data[0].stateName
+        }else{
+            cell.stateNameLabel.text = "not available"
+        }
+        
         return cell
     }
     
-    
-    
+}
+
+extension StatesViewController : StateDataDelegate{
+    func updateStateCounts(covidCleanData: [StateDataModel]) {
+        updated_CleanData = covidCleanData
+    }
     
     
 }

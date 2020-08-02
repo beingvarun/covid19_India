@@ -31,6 +31,7 @@ struct CovidManager {
                 if let safeData = data{
                     if let updatedData = self.parseJSON(covidData: safeData){
                         self.delegate?.updateCounts(covidData: updatedData)
+                        
                     }
                 }
             }

@@ -10,6 +10,7 @@ import UIKit
 
 class StatesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var stateNameLabel: UILabel!
     @IBOutlet weak var stateImage: UIImageView!
    
     

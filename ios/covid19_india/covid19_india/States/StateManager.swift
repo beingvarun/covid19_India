@@ -8,8 +8,18 @@
 
 import Foundation
 
+protocol StateDataDelegate {
+    func updateStateCounts(covidCleanData:Array<StateDataModel>)
+}
+
+
+
+
+
+
 struct StateManager {
     
+    var newdelegate:StateDataDelegate?
     func getAPI(){
         
         let webAPI = "https://api.covid19india.org/data.json"
@@ -22,10 +32,14 @@ struct StateManager {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: stateURL) { (data, response, error) in
                 if error != nil{
-                    print("something happened wrong\(error)")
+                    print("something happened wrong\(error ?? "error while connecting" as! Error)")
                 }
                 if let safeData = data{
-                    parseJSON(stateData:safeData)
+                    if let cleanedUpdatedData =  parseJSON(stateData:safeData){
+                        self.newdelegate?.updateStateCounts(covidCleanData: cleanedUpdatedData)
+                        
+                        
+                    }
                 }
                 
             }
@@ -33,13 +47,29 @@ struct StateManager {
         }
         
         
-        func parseJSON(stateData:Data){
+        
+        
+        
+        func parseJSON(stateData:Data)->[StateDataModel]?{
+            var cleanedData = [StateDataModel]()
             let decoder = JSONDecoder()
             do{
-                 let decodedData = try decoder.decode(StateData.self, from: stateData)
-                print(decodedData.statewise[0])
+                 var decodedData = try decoder.decode(StateData.self, from: stateData)
+                 decodedData.statewise.remove(at: 0)
+                 for covid_state in decodedData.statewise{
+                    if let covidActive = Int(covid_state.active), let covidConfirmed = Int(covid_state.confirmed),
+                        let covidDeceased = Int(covid_state.deaths), let covidRecovered = Int(covid_state.recovered){
+                        let covidStateName = covid_state.state
+                        let covidStateCode = covid_state.statecode
+                        let covidStateData = StateDataModel(stateName: covidStateName, active: covidActive, confirmed: covidConfirmed, recovered: covidRecovered, deceased: covidDeceased, statecode: covidStateCode)
+                        cleanedData.append(covidStateData)
+                    }
+                }
+
+              return cleanedData
             }catch{
                 print("jason parsing eroor\(error)")
+                return nil
             }
             
            

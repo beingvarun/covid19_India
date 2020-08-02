@@ -60,6 +60,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="stateImage" destination="Ily-Cx-X9W" id="hAO-Y8-SCJ"/>
+                <outlet property="stateNameLabel" destination="1AQ-fn-T48" id="yx3-rF-OAe"/>
             </connections>
             <point key="canvasLocation" x="854" y="145"/>
         </tableViewCell>
