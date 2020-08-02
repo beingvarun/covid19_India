@@ -9,6 +9,9 @@
 import UIKit
 
 class StatesViewController: UIViewController {
+    
+    var stateManager = StateManager()
+    
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -17,6 +20,10 @@ class StatesViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         tableView.register(UINib(nibName: "StatesTableViewCell", bundle: nil), forCellReuseIdentifier: "stateIdentifier")
+        
+        stateManager.getAPI()
+        
+        
     }
     
 
@@ -32,7 +39,7 @@ class StatesViewController: UIViewController {
 
 }
 
-
+//MARK:- tableView methods and delegates
 
 extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
