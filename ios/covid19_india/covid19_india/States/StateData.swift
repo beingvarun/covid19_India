@@ -15,4 +15,8 @@ struct StateData:Codable {
 
 struct Statewise :Codable {
     let state : String
+    let active: String
+    let confirmed : String
+    let deaths: String
+    let recovered : String
 }

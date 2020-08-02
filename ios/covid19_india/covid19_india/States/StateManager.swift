@@ -37,7 +37,7 @@ struct StateManager {
             let decoder = JSONDecoder()
             do{
                  let decodedData = try decoder.decode(StateData.self, from: stateData)
-                print(decodedData)
+                print(decodedData.statewise[0])
             }catch{
                 print("jason parsing eroor\(error)")
             }
