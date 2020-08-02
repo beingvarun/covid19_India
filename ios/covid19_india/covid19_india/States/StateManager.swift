@@ -34,7 +34,16 @@ struct StateManager {
         
         
         func parseJSON(stateData:Data){
-            print(stateData)
+            let decoder = JSONDecoder()
+            do{
+                 let decodedData = try decoder.decode(StateData.self, from: stateData)
+                print(decodedData)
+            }catch{
+                print("jason parsing eroor\(error)")
+            }
+            
+           
+            
         }
         
         

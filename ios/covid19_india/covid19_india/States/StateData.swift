@@ -9,10 +9,10 @@
 import Foundation
 
 struct StateData:Codable {
-    let state: [Statewise]
+    let statewise: [Statewise]
 }
 
 
 struct Statewise :Codable {
-    
+    let state : String
 }
