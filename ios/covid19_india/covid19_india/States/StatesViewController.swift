@@ -50,12 +50,15 @@ extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "stateIdentifier", for: indexPath) as! StatesTableViewCell
-        
-        if let total_Data = updated_CleanData{
-            cell.stateNameLabel.text = total_Data[0].stateName
-        }else{
-            cell.stateNameLabel.text = "not available"
+        DispatchQueue.main.async {
+            if let total_Data = self.updated_CleanData{
+                       cell.stateNameLabel.text = total_Data[indexPath.row].stateName
+                   }else{
+                       cell.stateNameLabel.text = "not available"
+                   }
         }
+        
+       
         
         return cell
     }
