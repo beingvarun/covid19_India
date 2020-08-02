@@ -69,8 +69,15 @@ extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
       }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let selectedState = tableView.indexPathForSelectedRow{
-            print(updated_CleanData?[selectedState[1]])
+        let stateVC = segue.destination as! SelectedStateViewController
+        if let currentSelected = tableView.indexPathForSelectedRow{
+            print()
+            if let stateData = updated_CleanData{
+                //print(stateData[currentSelected[1]])
+                stateVC.selectedState  =  stateData[currentSelected[1]]
+               
+            }
+            
         }
     }
    
@@ -83,6 +90,7 @@ extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
 extension StatesViewController : StateDataDelegate{
     func updateStateCounts(covidCleanData: [StateDataModel]) {
         updated_CleanData = covidCleanData
+        
     }
     
     

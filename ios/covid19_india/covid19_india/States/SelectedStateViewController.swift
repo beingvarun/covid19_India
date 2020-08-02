@@ -9,11 +9,23 @@
 import UIKit
 
 class SelectedStateViewController: UIViewController {
+    
+    var selectedState:StateDataModel?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        loadData()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func loadData(){
+        if let stateData = selectedState{
+            print(stateData)
+        }
     }
     
 
