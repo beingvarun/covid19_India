@@ -22,6 +22,7 @@ class StatesViewController: UIViewController {
         // Do any additional setup after loading the view.
         stateManager.newdelegate = self
               stateManager.getAPI()
+        tableView.allowsSelection = true
         tableView.register(UINib(nibName: "StatesTableViewCell", bundle: nil), forCellReuseIdentifier: "stateIdentifier")
       
         
@@ -63,6 +64,20 @@ extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+          performSegue(withIdentifier: "goToState", sender: self)
+      }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selectedState = tableView.indexPathForSelectedRow{
+            print(updated_CleanData?[selectedState[1]])
+        }
+    }
+   
+    
+    
+    
+    
 }
 
 extension StatesViewController : StateDataDelegate{
@@ -72,3 +87,11 @@ extension StatesViewController : StateDataDelegate{
     
     
 }
+
+
+
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//      let itemVC = segue.destination as! TodeyListViewController
+//      if let currentSelected = tableView.indexPathForSelectedRow{
+//          itemVC.mySelectedCategory = categories[currentSelected.row]
+//      }
