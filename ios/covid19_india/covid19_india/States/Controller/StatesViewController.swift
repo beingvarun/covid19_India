@@ -19,6 +19,7 @@ class StatesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
          loadData()
+        
     }
     
     
@@ -37,6 +38,7 @@ class StatesViewController: UIViewController {
     
     func loadData(){
         stateManager.getAPI()
+        tableView.reloadData()
     }
     
 
