@@ -11,6 +11,8 @@ import Foundation
 protocol CovidDataDelegate {
     func updateCounts(covidData:CovidDataModel)
 }
+
+
 struct CovidManager {
     
     var delegate:CovidDataDelegate?

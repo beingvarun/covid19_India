@@ -16,17 +16,27 @@ class StatesViewController: UIViewController {
     
 
     @IBOutlet weak var tableView: UITableView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+         loadData()
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         stateManager.newdelegate = self
-              stateManager.getAPI()
+       
         tableView.allowsSelection = true
         tableView.register(UINib(nibName: "StatesTableViewCell", bundle: nil), forCellReuseIdentifier: "stateIdentifier")
       
         
         
+    }
+    
+    func loadData(){
+        stateManager.getAPI()
     }
     
 
@@ -50,13 +60,14 @@ extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "stateIdentifier", for: indexPath) as! StatesTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "stateIdentifier", for: indexPath) as! StatesTableViewCell
+        
         DispatchQueue.main.async {
+            
             if let total_Data = self.updated_CleanData{
                        cell.stateNameLabel.text = total_Data[indexPath.row].stateName
-                   }else{
-                       cell.stateNameLabel.text = "not available"
                    }
+            
         }
         
        
@@ -90,9 +101,9 @@ extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
 extension StatesViewController : StateDataDelegate{
     func updateStateCounts(covidCleanData: [StateDataModel]) {
         updated_CleanData = covidCleanData
-        
+       
     }
-    
+ 
     
 }
 
