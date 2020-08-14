@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="boy-NO-HNH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="boy-NO-HNH">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -287,14 +287,88 @@
                     <view key="view" contentMode="scaleToFill" id="wpO-f8-SyC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93189256809999998" green="0.5" blue="0.18035110830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spread" translatesAutoresizingMaskIntoConstraints="NO" id="YXp-4c-70B">
+                                <rect key="frame" x="0.0" y="479" width="375" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YXp-4c-70B" secondAttribute="height" multiplier="375:250" id="f5e-Em-QtE"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="efn-jA-1Dy">
+                                <rect key="frame" x="0.0" y="306" width="375" height="173"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prn-9q-wNh">
+                                        <rect key="frame" x="141" y="0.0" width="93.333333333333314" height="33"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me5-Xn-gBG">
+                                        <rect key="frame" x="160.66666666666666" y="35" width="53.666666666666657" height="33"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3m-e0-Wi8">
+                                        <rect key="frame" x="142" y="70" width="91.333333333333314" height="33"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deceased" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tef-OG-MJR">
+                                        <rect key="frame" x="145" y="105" width="85" height="33"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGx-vD-G98">
+                                        <rect key="frame" x="136.66666666666666" y="140" width="102" height="33"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
+                                        <state key="normal" title="Districtwise"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lcy-3e-zxM" firstAttribute="trailing" secondItem="YXp-4c-70B" secondAttribute="trailing" id="1lL-es-UxJ"/>
+                            <constraint firstItem="lcy-3e-zxM" firstAttribute="trailing" secondItem="efn-jA-1Dy" secondAttribute="trailing" id="JOl-yq-jf9"/>
+                            <constraint firstItem="YXp-4c-70B" firstAttribute="leading" secondItem="lcy-3e-zxM" secondAttribute="leading" id="KEl-xN-JuF"/>
+                            <constraint firstItem="efn-jA-1Dy" firstAttribute="leading" secondItem="lcy-3e-zxM" secondAttribute="leading" id="SRH-z3-ETk"/>
+                            <constraint firstItem="lcy-3e-zxM" firstAttribute="bottom" secondItem="YXp-4c-70B" secondAttribute="bottom" id="h08-zP-6KR"/>
+                            <constraint firstItem="YXp-4c-70B" firstAttribute="top" secondItem="efn-jA-1Dy" secondAttribute="bottom" id="zkc-3J-ifh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lcy-3e-zxM"/>
                     </view>
                     <navigationItem key="navigationItem" id="n2f-IN-VpS"/>
+                    <connections>
+                        <outlet property="Districtwise" destination="xGx-vD-G98" id="l5L-FN-qcn"/>
+                        <outlet property="stateActive" destination="me5-Xn-gBG" id="92G-3M-Syi"/>
+                        <outlet property="stateConfirmed" destination="prn-9q-wNh" id="PYB-Ks-7zD"/>
+                        <outlet property="stateDeceased" destination="Tef-OG-MJR" id="u9g-bQ-DDI"/>
+                        <outlet property="stateRecovered" destination="p3m-e0-Wi8" id="lok-fB-raj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdG-fM-ezX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1903" y="-1432"/>
+            <point key="canvasLocation" x="1901.5999999999999" y="-1432.0197044334975"/>
+        </scene>
+        <!--Corona AR-->
+        <scene sceneID="hoF-hN-JFG">
+            <objects>
+                <viewController id="BVd-AO-aFH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zga-1D-QGb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xHG-2L-Xdb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Corona AR" image="corona-logo" selectedImage="corona-logo" id="q4X-mW-UCP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDp-j0-3oP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-657" y="-3018"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PGo-Wx-pCa">
@@ -311,6 +385,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="G2Q-nn-qra"/>
                         <segue destination="Zjf-4s-kp7" kind="relationship" relationship="viewControllers" id="KEE-Po-cjH"/>
+                        <segue destination="BVd-AO-aFH" kind="relationship" relationship="viewControllers" id="Vw6-3u-XCs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azq-am-wzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -339,7 +414,9 @@
     </scenes>
     <resources>
         <image name="Image" width="3880" height="5820"/>
+        <image name="corona-logo" width="15" height="16"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="spread" width="750" height="500"/>
     </resources>
 </document>

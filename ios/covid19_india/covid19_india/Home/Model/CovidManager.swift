@@ -21,6 +21,7 @@ struct CovidManager {
     func getUrl(){
         let url = covidUrl
         connnectWebAPI(webUrl: url)
+        
     }
     func connnectWebAPI(webUrl:String){
        //1. create Url

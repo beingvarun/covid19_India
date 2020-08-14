@@ -10,6 +10,11 @@ import UIKit
 
 class SelectedStateViewController: UIViewController {
     
+    @IBOutlet weak var stateConfirmed: UILabel!
+    @IBOutlet weak var stateActive: UILabel!
+    @IBOutlet weak var stateRecovered: UILabel!
+    @IBOutlet weak var stateDeceased: UILabel!
+    @IBOutlet weak var Districtwise: UIButton!
     var selectedState:StateDataModel?
     
     
@@ -24,7 +29,10 @@ class SelectedStateViewController: UIViewController {
     
     func loadData(){
         if let stateData = selectedState{
-            print(stateData)
+            stateConfirmed.text = "CONFIRMED :  \(stateData.confirmed)"
+            stateActive.text = "ACTIVE : \(stateData.active)"
+            stateRecovered.text = "RECOVERED : \(stateData.recovered)"
+            stateDeceased.text = "DECEASED :  \(stateData.deceased)"
         }
     }
     

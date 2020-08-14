@@ -13,14 +13,13 @@ class StatesViewController: UIViewController {
     var stateManager = StateManager()
     
     var updated_CleanData:[StateDataModel]?
+       
+    
     
 
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewWillAppear(_ animated: Bool) {
-         loadData()
-        
-    }
+    
     
     
     override func viewDidLoad() {
@@ -28,7 +27,7 @@ class StatesViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         stateManager.newdelegate = self
-       
+        //loadData()
         tableView.allowsSelection = true
         tableView.register(UINib(nibName: "StatesTableViewCell", bundle: nil), forCellReuseIdentifier: "stateIdentifier")
       
@@ -36,9 +35,18 @@ class StatesViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        loadData()
+        tableView.reloadData()
+    }
+    
+    
+    
     func loadData(){
         stateManager.getAPI()
-        tableView.reloadData()
+        
     }
     
 
@@ -66,10 +74,10 @@ extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
         
         DispatchQueue.main.async {
             
-            if let total_Data = self.updated_CleanData{
-                       cell.stateNameLabel.text = total_Data[indexPath.row].stateName
+            if let total_Data = self.updated_CleanData?[indexPath.row]{
+                cell.stateNameLabel.text = total_Data.stateName
                    }
-            
+            //self.tableView.reloadData()
         }
         
        
