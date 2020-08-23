@@ -169,7 +169,7 @@
             </objects>
             <point key="canvasLocation" x="-630" y="-1428"/>
         </scene>
-        <!--States View Controller-->
+        <!--COVID19 India-->
         <scene sceneID="86p-eV-dQ8">
             <objects>
                 <viewController id="kWr-T0-eFU" customClass="StatesViewController" customModule="COVID_19_India" customModuleProvider="target" sceneMemberID="viewController">
@@ -262,6 +262,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="r5F-3g-EAi" firstAttribute="trailing" secondItem="3ik-dJ-eDl" secondAttribute="trailing" constant="16" id="3Yh-sP-hMt"/>
                             <constraint firstItem="3ik-dJ-eDl" firstAttribute="bottom" secondItem="r5F-3g-EAi" secondAttribute="bottom" id="dww-h3-Ft8"/>
@@ -270,7 +271,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r5F-3g-EAi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fOk-qb-oRy"/>
+                    <navigationItem key="navigationItem" title="COVID19 India" id="fOk-qb-oRy">
+                        <barButtonItem key="backBarButtonItem" title="State Data" id="pq2-TQ-dfx"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="otc-bm-vdq" id="J5F-QP-PhZ"/>
                         <segue destination="XwZ-8c-KQW" kind="show" identifier="goToState" id="OlZ-ce-8kf"/>
@@ -418,6 +421,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cGp-za-B3t">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
