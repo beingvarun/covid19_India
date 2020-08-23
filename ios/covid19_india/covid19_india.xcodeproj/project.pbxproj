@@ -114,11 +114,11 @@
 		8B05A95E249FC9A9008E55E2 /* covid19_india */ = {
 			isa = PBXGroup;
 			children = (
+				8B1D48AC24F2AB2D00CF5840 /* Models */,
+				8B6AD3EE24D70F6800FE91C1 /* View */,
+				8B1D48AB24F2AAC000CF5840 /* Controllers */,
 				8B05A95F249FC9A9008E55E2 /* AppDelegate.swift */,
 				8B05A961249FC9A9008E55E2 /* SceneDelegate.swift */,
-				8B0B1C1A24D546790027E544 /* Home */,
-				8B0B1C1B24D546CF0027E544 /* States */,
-				8BA5FC6824AF498F00D396CD /* View */,
 				D9F080F024ACC447009D4763 /* Fonts */,
 				8B05A973249FD156008E55E2 /* Assets.xcassets */,
 				8B05A96A249FC9AE008E55E2 /* LaunchScreen.storyboard */,
@@ -128,77 +128,54 @@
 			path = covid19_india;
 			sourceTree = "<group>";
 		};
-		8B0B1C1A24D546790027E544 /* Home */ = {
+		8B1D48AB24F2AAC000CF5840 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8BA5FC6724AF497A00D396CD /* Controller */,
-				8BA5FC6624AF495A00D396CD /* Model */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		8B0B1C1B24D546CF0027E544 /* States */ = {
-			isa = PBXGroup;
-			children = (
-				8B6AD3EC24D70EED00FE91C1 /* Model */,
-				8B6AD3EE24D70F6800FE91C1 /* View */,
-				8B6AD3ED24D70F2700FE91C1 /* Controller */,
+				8B05A963249FC9A9008E55E2 /* HomeController.swift */,
+				8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */,
+				8B0B1C1E24D548300027E544 /* StatesViewController.swift */,
 				8B6AD3EF24D7103600FE91C1 /* SelectedStateViewController.swift */,
 			);
-			path = States;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		8B6AD3EC24D70EED00FE91C1 /* Model */ = {
+		8B1D48AC24F2AB2D00CF5840 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B6AD3EC24D70EED00FE91C1 /* StatesModel */,
+				8BA5FC6624AF495A00D396CD /* HomeModel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B6AD3EC24D70EED00FE91C1 /* StatesModel */ = {
 			isa = PBXGroup;
 			children = (
 				8BF8431224D5CBE400AB346F /* StateManager.swift */,
 				8BF8431424D5E95A00AB346F /* StateData.swift */,
 				8B6AD3E324D6D42B00FE91C1 /* StateDataModel.swift */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8B6AD3ED24D70F2700FE91C1 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */,
-				8B0B1C1E24D548300027E544 /* StatesViewController.swift */,
-			);
-			path = Controller;
+			path = StatesModel;
 			sourceTree = "<group>";
 		};
 		8B6AD3EE24D70F6800FE91C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8B05A965249FC9A9008E55E2 /* Main.storyboard */,
 				8BDA9C3124D5708D00C2B908 /* StatesTableViewCell.xib */,
 			);
-			path = View;
+			name = View;
+			path = States/View;
 			sourceTree = "<group>";
 		};
-		8BA5FC6624AF495A00D396CD /* Model */ = {
+		8BA5FC6624AF495A00D396CD /* HomeModel */ = {
 			isa = PBXGroup;
 			children = (
 				8BA5FC6924AF49E700D396CD /* CovidManager.swift */,
 				8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */,
 				8B68A86724B102040035AB5A /* covidDataModel.swift */,
 			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8BA5FC6724AF497A00D396CD /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8B05A963249FC9A9008E55E2 /* HomeController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		8BA5FC6824AF498F00D396CD /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8B05A965249FC9A9008E55E2 /* Main.storyboard */,
-			);
-			path = View;
+			path = HomeModel;
 			sourceTree = "<group>";
 		};
 		D9F080F024ACC447009D4763 /* Fonts */ = {
