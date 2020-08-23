@@ -29,10 +29,10 @@ class SelectedStateViewController: UIViewController {
     
     func loadData(){
         if let stateData = selectedState{
-            stateConfirmed.text = "CONFIRMED :  \(stateData.confirmed)"
-            stateActive.text = "ACTIVE : \(stateData.active)"
-            stateRecovered.text = "RECOVERED : \(stateData.recovered)"
-            stateDeceased.text = "DECEASED :  \(stateData.deceased)"
+            stateConfirmed.text = "Confirmed :  \(stateData.confirmed)"
+            stateActive.text = "Active : \(stateData.active)"
+            stateRecovered.text = "Recovered : \(stateData.recovered)"
+            stateDeceased.text = "Deceased :  \(stateData.deceased)"
         }
     }
     

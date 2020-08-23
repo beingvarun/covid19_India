@@ -45,7 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B05A95C249FC9A9008E55E2 /* covid19_india.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = covid19_india.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B05A95C249FC9A9008E55E2 /* COVID 19 India.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "COVID 19 India.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B05A95F249FC9A9008E55E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B05A961249FC9A9008E55E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8B05A963249FC9A9008E55E2 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		8B05A95D249FC9A9008E55E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B05A95C249FC9A9008E55E2 /* covid19_india.app */,
+				8B05A95C249FC9A9008E55E2 /* COVID 19 India.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			);
 			name = covid19_india;
 			productName = covid19_india;
-			productReference = 8B05A95C249FC9A9008E55E2 /* covid19_india.app */;
+			productReference = 8B05A95C249FC9A9008E55E2 /* COVID 19 India.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -480,7 +480,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "varunraj.covid19-india";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "COVID 19 India";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,7 +498,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "varunraj.covid19-india";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "COVID 19 India";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
