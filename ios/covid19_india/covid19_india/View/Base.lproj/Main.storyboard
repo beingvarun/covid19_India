@@ -370,6 +370,22 @@
             </objects>
             <point key="canvasLocation" x="-657" y="-3018"/>
         </scene>
+        <!--ML News-->
+        <scene sceneID="dsE-hz-TuO">
+            <objects>
+                <viewController id="4i0-qZ-IRP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hkC-AI-FQq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hdX-e0-WDe"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="ML News" image="chip" landscapeImage="chip" selectedImage="chip" springLoaded="YES" id="prf-VD-e7g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gl2-u9-JAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="-2250"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PGo-Wx-pCa">
             <objects>
@@ -386,11 +402,12 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="G2Q-nn-qra"/>
                         <segue destination="Zjf-4s-kp7" kind="relationship" relationship="viewControllers" id="KEE-Po-cjH"/>
                         <segue destination="BVd-AO-aFH" kind="relationship" relationship="viewControllers" id="Vw6-3u-XCs"/>
+                        <segue destination="4i0-qZ-IRP" kind="relationship" relationship="viewControllers" id="MEB-iD-Djo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azq-am-wzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="300" y="-2214"/>
+            <point key="canvasLocation" x="322" y="-2274"/>
         </scene>
         <!--States-->
         <scene sceneID="d8s-Lg-TzF">
@@ -414,6 +431,7 @@
     </scenes>
     <resources>
         <image name="Image" width="3880" height="5820"/>
+        <image name="chip" width="15" height="13"/>
         <image name="corona-logo" width="15" height="16"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
