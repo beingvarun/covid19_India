@@ -4,6 +4,7 @@
 target 'covid19_india' do
   # Comment the next line if you don't want to use dynamic frameworks
  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
   use_frameworks!
 

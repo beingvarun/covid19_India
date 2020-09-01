@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
+import GoogleMaps
+
 
 class SelectedStateViewController: UIViewController {
     
@@ -15,6 +18,7 @@ class SelectedStateViewController: UIViewController {
     @IBOutlet weak var stateRecovered: UILabel!
     @IBOutlet weak var stateDeceased: UILabel!
     @IBOutlet weak var Districtwise: UIButton!
+    @IBOutlet weak var mapView: GMSMapView!
     var selectedState:StateDataModel?
     
     
@@ -25,7 +29,26 @@ class SelectedStateViewController: UIViewController {
         loadData()
         
         // Do any additional setup after loading the view.
+       
+        
+        
     }
+    
+    override func viewDidLayoutSubviews() {
+        let camera = GMSCameraPosition.camera(withLatitude: 10.9952298, longitude: 78.4142951, zoom: 7.5)
+               let mapView = GMSMapView.map(withFrame: self.mapView.frame, camera: camera)
+               self.view.addSubview(mapView)
+
+               // Creates a marker in the center of the map.
+               let marker = GMSMarker()
+               marker.position = CLLocationCoordinate2D(latitude: 10.9952298, longitude: 78.4142951)
+               marker.title = "Sydney"
+               marker.snippet = "Australia"
+               marker.map = mapView
+    }
+    
+    
+    
     
     func loadData(){
         if let stateData = selectedState{
@@ -33,8 +56,33 @@ class SelectedStateViewController: UIViewController {
             stateActive.text = "Active : \(stateData.active)"
             stateRecovered.text = "Recovered : \(stateData.recovered)"
             stateDeceased.text = "Deceased :  \(stateData.deceased)"
+            getCoordinate(addressString: stateData.stateName) { (CLLocationCoordinate2D, error) in
+                if error != nil{
+                    print(error)
+                }else{
+                    print(CLLocationCoordinate2D)
+                }
+            }
         }
     }
+    
+    func getCoordinate( addressString : String,
+            completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(addressString) { (placemarks, error) in
+            if error == nil {
+                if let placemark = placemarks?[0] {
+                    let location = placemark.location!
+                        
+                    completionHandler(location.coordinate, nil)
+                    return
+                }
+            }
+                
+            completionHandler(kCLLocationCoordinate2DInvalid, error as NSError?)
+        }
+    }
+    
     
 
 

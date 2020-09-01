@@ -332,6 +332,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXX-SL-gQM" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="88" width="375" height="226"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -339,7 +343,11 @@
                             <constraint firstItem="lcy-3e-zxM" firstAttribute="trailing" secondItem="efn-jA-1Dy" secondAttribute="trailing" id="JOl-yq-jf9"/>
                             <constraint firstItem="YXp-4c-70B" firstAttribute="leading" secondItem="lcy-3e-zxM" secondAttribute="leading" id="KEl-xN-JuF"/>
                             <constraint firstItem="efn-jA-1Dy" firstAttribute="leading" secondItem="lcy-3e-zxM" secondAttribute="leading" constant="25" id="SRH-z3-ETk"/>
+                            <constraint firstItem="lcy-3e-zxM" firstAttribute="trailing" secondItem="KXX-SL-gQM" secondAttribute="trailing" id="fwJ-id-mXQ"/>
                             <constraint firstItem="lcy-3e-zxM" firstAttribute="bottom" secondItem="YXp-4c-70B" secondAttribute="bottom" id="h08-zP-6KR"/>
+                            <constraint firstItem="KXX-SL-gQM" firstAttribute="leading" secondItem="lcy-3e-zxM" secondAttribute="leading" id="is5-Un-eYg"/>
+                            <constraint firstItem="efn-jA-1Dy" firstAttribute="top" secondItem="KXX-SL-gQM" secondAttribute="bottom" id="jL0-4n-aD6"/>
+                            <constraint firstItem="KXX-SL-gQM" firstAttribute="top" secondItem="lcy-3e-zxM" secondAttribute="top" id="ma0-wt-iIp"/>
                             <constraint firstItem="YXp-4c-70B" firstAttribute="top" secondItem="efn-jA-1Dy" secondAttribute="bottom" id="zkc-3J-ifh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lcy-3e-zxM"/>
@@ -347,6 +355,7 @@
                     <navigationItem key="navigationItem" id="n2f-IN-VpS"/>
                     <connections>
                         <outlet property="Districtwise" destination="xGx-vD-G98" id="l5L-FN-qcn"/>
+                        <outlet property="mapView" destination="KXX-SL-gQM" id="Prv-us-USg"/>
                         <outlet property="stateActive" destination="me5-Xn-gBG" id="92G-3M-Syi"/>
                         <outlet property="stateConfirmed" destination="prn-9q-wNh" id="PYB-Ks-7zD"/>
                         <outlet property="stateDeceased" destination="Tef-OG-MJR" id="u9g-bQ-DDI"/>
