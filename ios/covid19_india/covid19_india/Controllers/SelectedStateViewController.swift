@@ -31,15 +31,11 @@ class SelectedStateViewController: UIViewController {
         
         // Do any additional setup after loading the view.
        
-        
+        getMap()
         
     }
     
-    override func viewDidLayoutSubviews() {
-     getMap()
-        
-        
-    }
+
     
     
     
@@ -60,9 +56,9 @@ class SelectedStateViewController: UIViewController {
             
             getCoordinate(addressString: selectedState ) { (CLLocationCoordinate2D, error) in
                                           if error != nil{
-                                              print(error)
+                                              print("Error loading Data")
                                           }else{
-                                             
+                                            
                                             let camera = GMSCameraPosition.camera(withLatitude: CLLocationCoordinate2D.latitude, longitude: CLLocationCoordinate2D.longitude, zoom: 7.5)
                                                         let mapView = GMSMapView.map(withFrame: self.mapView.frame, camera: camera)
                                                         self.view.addSubview(mapView)
@@ -70,8 +66,7 @@ class SelectedStateViewController: UIViewController {
                                                         // Creates a marker in the center of the map.
                                                         let marker = GMSMarker()
                                                         //marker.position = CLLocationCoordinate2D(latitude: 10.9952298, longitude: 78.4142951)
-                                                        marker.title = "Sydney"
-                                                        marker.snippet = "Australia"
+                                                      
                                                         marker.map = mapView
                                             
                                             
