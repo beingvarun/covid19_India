@@ -20,6 +20,7 @@ class SelectedStateViewController: UIViewController {
     @IBOutlet weak var Districtwise: UIButton!
     @IBOutlet weak var mapView: GMSMapView!
     var selectedState:StateDataModel?
+    var currentState:String?
     
     
 
@@ -35,16 +36,9 @@ class SelectedStateViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        let camera = GMSCameraPosition.camera(withLatitude: 10.9952298, longitude: 78.4142951, zoom: 7.5)
-               let mapView = GMSMapView.map(withFrame: self.mapView.frame, camera: camera)
-               self.view.addSubview(mapView)
-
-               // Creates a marker in the center of the map.
-               let marker = GMSMarker()
-               marker.position = CLLocationCoordinate2D(latitude: 10.9952298, longitude: 78.4142951)
-               marker.title = "Sydney"
-               marker.snippet = "Australia"
-               marker.map = mapView
+     getMap()
+        
+        
     }
     
     
@@ -56,15 +50,45 @@ class SelectedStateViewController: UIViewController {
             stateActive.text = "Active : \(stateData.active)"
             stateRecovered.text = "Recovered : \(stateData.recovered)"
             stateDeceased.text = "Deceased :  \(stateData.deceased)"
-            getCoordinate(addressString: stateData.stateName) { (CLLocationCoordinate2D, error) in
-                if error != nil{
-                    print(error)
-                }else{
-                    print(CLLocationCoordinate2D)
-                }
-            }
+            currentState = stateData.stateName
+           
         }
     }
+    
+    func getMap(){
+        if let selectedState = currentState{
+            
+            getCoordinate(addressString: selectedState ) { (CLLocationCoordinate2D, error) in
+                                          if error != nil{
+                                              print(error)
+                                          }else{
+                                             
+                                            let camera = GMSCameraPosition.camera(withLatitude: CLLocationCoordinate2D.latitude, longitude: CLLocationCoordinate2D.longitude, zoom: 7.5)
+                                                        let mapView = GMSMapView.map(withFrame: self.mapView.frame, camera: camera)
+                                                        self.view.addSubview(mapView)
+
+                                                        // Creates a marker in the center of the map.
+                                                        let marker = GMSMarker()
+                                                        //marker.position = CLLocationCoordinate2D(latitude: 10.9952298, longitude: 78.4142951)
+                                                        marker.title = "Sydney"
+                                                        marker.snippet = "Australia"
+                                                        marker.map = mapView
+                                            
+                                            
+                                            
+                                            
+                                          }
+                                      }
+            
+        }
+        
+         
+            
+        
+        
+      
+    }
+    
     
     func getCoordinate( addressString : String,
             completionHandler: @escaping(CLLocationCoordinate2D, NSError?) -> Void ) {
