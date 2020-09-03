@@ -24,7 +24,8 @@ class StatesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
+        
         // Do any additional setup after loading the view.
         stateManager.newdelegate = self
         //loadData()
@@ -37,10 +38,13 @@ class StatesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         loadData()
         tableView.reloadData()
     }
+    
+    
+    
     
     
     

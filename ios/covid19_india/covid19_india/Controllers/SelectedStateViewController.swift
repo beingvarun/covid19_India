@@ -13,6 +13,7 @@ import GoogleMaps
 
 class SelectedStateViewController: UIViewController {
     
+    @IBOutlet weak var stateName: UILabel!
     @IBOutlet weak var stateConfirmed: UILabel!
     @IBOutlet weak var stateActive: UILabel!
     @IBOutlet weak var stateRecovered: UILabel!
@@ -22,11 +23,12 @@ class SelectedStateViewController: UIViewController {
     var selectedState:StateDataModel?
     var currentState:String?
     
-    
+    @IBOutlet weak var stackViewList: UIStackView!
+    let col1 = UIColor(red: 0.961, green: 0.881, blue: 0.931, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        stackViewList.addBackground(color: col1)
         loadData()
         
         // Do any additional setup after loading the view.
@@ -42,10 +44,11 @@ class SelectedStateViewController: UIViewController {
     
     func loadData(){
         if let stateData = selectedState{
-            stateConfirmed.text = "Confirmed :  \(stateData.confirmed)"
-            stateActive.text = "Active : \(stateData.active)"
-            stateRecovered.text = "Recovered : \(stateData.recovered)"
-            stateDeceased.text = "Deceased :  \(stateData.deceased)"
+            stateName.text = (stateData.stateName).uppercased()
+            stateConfirmed.text = "Confirmed :  \(stateData.confirmed)".uppercased()
+            stateActive.text = "Active : \(stateData.active)".uppercased()
+            stateRecovered.text = "Recovered : \(stateData.recovered)".uppercased()
+            stateDeceased.text = "Deceased :  \(stateData.deceased)".uppercased()
             currentState = stateData.stateName
            
         }
@@ -105,4 +108,13 @@ class SelectedStateViewController: UIViewController {
     
 
 
+}
+
+extension UIStackView {
+    func addBackground(color: UIColor) {
+        let subView = UIView(frame: bounds)
+        subView.backgroundColor = color
+        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subView, at: 0)
+    }
 }
