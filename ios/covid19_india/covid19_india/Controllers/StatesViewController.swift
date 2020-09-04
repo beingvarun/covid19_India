@@ -79,7 +79,14 @@ extension StatesViewController : UITableViewDelegate, UITableViewDataSource{
         DispatchQueue.main.async {
             
             if let total_Data = self.updated_CleanData?[indexPath.row]{
+                
+                if let stateImage = UIImage(named: total_Data.stateName){
+                    cell.stateImage.image = stateImage
+                }else{
+                    cell.stateImage.image = UIImage(named: "india")
+                }
                 cell.stateNameLabel.text = total_Data.stateName
+                
                    }
             //self.tableView.reloadData()
         }
