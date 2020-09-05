@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		8B6AD3E424D6D42B00FE91C1 /* StateDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AD3E324D6D42B00FE91C1 /* StateDataModel.swift */; };
 		8B6AD3F024D7103600FE91C1 /* SelectedStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AD3EF24D7103600FE91C1 /* SelectedStateViewController.swift */; };
 		8B6AD3F224D7425400FE91C1 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AD3F124D7425400FE91C1 /* K.swift */; };
+		8B6B589A2503303C004EDB26 /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6B58992503303C004EDB26 /* ARController.swift */; };
 		8BA5FC6A24AF49E700D396CD /* CovidManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5FC6924AF49E700D396CD /* CovidManager.swift */; };
 		8BA5FC6C24AF695D00D396CD /* CovidJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */; };
 		8BDA9C3224D5708D00C2B908 /* StatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */; };
@@ -61,6 +62,7 @@
 		8B6AD3E324D6D42B00FE91C1 /* StateDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDataModel.swift; sourceTree = "<group>"; };
 		8B6AD3EF24D7103600FE91C1 /* SelectedStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedStateViewController.swift; sourceTree = "<group>"; };
 		8B6AD3F124D7425400FE91C1 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		8B6B58992503303C004EDB26 /* ARController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		8BA5FC6924AF49E700D396CD /* CovidManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidManager.swift; sourceTree = "<group>"; };
 		8BA5FC6B24AF695D00D396CD /* CovidJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidJSON.swift; sourceTree = "<group>"; };
 		8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesTableViewCell.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				8BDA9C3024D5708D00C2B908 /* StatesTableViewCell.swift */,
 				8B0B1C1E24D548300027E544 /* StatesViewController.swift */,
 				8B6AD3EF24D7103600FE91C1 /* SelectedStateViewController.swift */,
+				8B6B58992503303C004EDB26 /* ARController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,7 +194,6 @@
 				44F3951509343ADCE62ADCBC /* Pods-covid19_india.debug.xcconfig */,
 				05DB82C821407B4021307CD4 /* Pods-covid19_india.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -366,6 +368,7 @@
 				8B0B1C1F24D548300027E544 /* StatesViewController.swift in Sources */,
 				8B05A964249FC9A9008E55E2 /* HomeController.swift in Sources */,
 				8B6AD3E424D6D42B00FE91C1 /* StateDataModel.swift in Sources */,
+				8B6B589A2503303C004EDB26 /* ARController.swift in Sources */,
 				8BA5FC6C24AF695D00D396CD /* CovidJSON.swift in Sources */,
 				8B6AD3F224D7425400FE91C1 /* K.swift in Sources */,
 				8BDA9C3224D5708D00C2B908 /* StatesTableViewCell.swift in Sources */,

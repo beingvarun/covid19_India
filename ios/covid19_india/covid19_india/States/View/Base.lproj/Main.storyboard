@@ -14,8 +14,14 @@
         <array key="Montserrat-ExtraBold.ttf">
             <string>Montserrat-ExtraBold</string>
         </array>
+        <array key="Montserrat-ExtraBoldItalic.ttf">
+            <string>Montserrat-ExtraBoldItalic</string>
+        </array>
         <array key="Montserrat-Medium.ttf">
             <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -305,7 +311,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzs-kH-Lmb">
                                         <rect key="frame" x="160.66666666666666" y="0.0" width="54" height="25.666666666666668"/>
                                         <color key="tintColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-ExtraBold" family="Montserrat" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-ExtraBoldItalic" family="Montserrat" pointSize="22"/>
                                         <color key="textColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -314,36 +320,37 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prn-9q-wNh">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="18.666666666666668"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                 <color key="textColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="me5-Xn-gBG">
                                                 <rect key="frame" x="0.0" y="20.666666666666686" width="44.333333333333336" height="18.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                 <color key="textColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recovered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3m-e0-Wi8">
                                                 <rect key="frame" x="0.0" y="41.333333333333371" width="77.333333333333329" height="18.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                 <color key="textColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deceased" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tef-OG-MJR">
                                                 <rect key="frame" x="0.0" y="61.999999999999993" width="72" height="18.666666666666664"/>
-                                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                                                 <color key="textColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGx-vD-G98">
-                                        <rect key="frame" x="143.66666666666666" y="136.33333333333331" width="88" height="32"/>
-                                        <color key="backgroundColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="17"/>
+                                        <rect key="frame" x="107" y="136.33333333333331" width="161" height="32"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-ExtraBoldItalic" family="Montserrat" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Districtwise"/>
+                                        <state key="normal" title="Get Districtwise Data">
+                                            <color key="titleColor" red="0.18823529410000001" green="0.30980392159999998" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="colorFromImage"/>
@@ -385,22 +392,6 @@
             </objects>
             <point key="canvasLocation" x="1901.5999999999999" y="-1432.0197044334975"/>
         </scene>
-        <!--Corona AR-->
-        <scene sceneID="hoF-hN-JFG">
-            <objects>
-                <viewController id="BVd-AO-aFH" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zga-1D-QGb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="xHG-2L-Xdb"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Corona AR" image="corona-logo" selectedImage="corona-logo" id="q4X-mW-UCP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xDp-j0-3oP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-657" y="-3018"/>
-        </scene>
         <!--ML News-->
         <scene sceneID="dsE-hz-TuO">
             <objects>
@@ -417,6 +408,36 @@
             </objects>
             <point key="canvasLocation" x="1090" y="-2250"/>
         </scene>
+        <!--AR Corona-->
+        <scene sceneID="PQb-zd-39Z">
+            <objects>
+                <viewController id="6Hx-Af-YiZ" customClass="ARController" customModule="COVID_19_India" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xw8-wP-evc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YCj-rq-ZOb">
+                                <rect key="frame" x="0.0" y="44" width="375" height="635"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mfz-G1-pDR" firstAttribute="trailing" secondItem="YCj-rq-ZOb" secondAttribute="trailing" id="2eu-jb-Ri4"/>
+                            <constraint firstItem="YCj-rq-ZOb" firstAttribute="top" secondItem="Mfz-G1-pDR" secondAttribute="top" id="6bU-gM-eaX"/>
+                            <constraint firstItem="YCj-rq-ZOb" firstAttribute="leading" secondItem="Mfz-G1-pDR" secondAttribute="leading" id="JGx-CS-f8o"/>
+                            <constraint firstItem="Mfz-G1-pDR" firstAttribute="bottom" secondItem="YCj-rq-ZOb" secondAttribute="bottom" constant="50" id="wz3-Od-BIE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mfz-G1-pDR"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="AR Corona" image="corona-logo" id="Kvb-VL-ClY"/>
+                    <connections>
+                        <outlet property="scnView" destination="YCj-rq-ZOb" id="Evd-pK-dID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKc-Hy-jNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="-2252"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PGo-Wx-pCa">
             <objects>
@@ -432,8 +453,8 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="G2Q-nn-qra"/>
                         <segue destination="Zjf-4s-kp7" kind="relationship" relationship="viewControllers" id="KEE-Po-cjH"/>
-                        <segue destination="BVd-AO-aFH" kind="relationship" relationship="viewControllers" id="Vw6-3u-XCs"/>
                         <segue destination="4i0-qZ-IRP" kind="relationship" relationship="viewControllers" id="MEB-iD-Djo"/>
+                        <segue destination="6Hx-Af-YiZ" kind="relationship" relationship="viewControllers" id="FXp-5i-Cjg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azq-am-wzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -477,7 +498,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="spread" width="750" height="500"/>
         <namedColor name="colorFromImage">
-            <color red="0.96051126720000002" green="0.88142615560000004" blue="0.93333929780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.96100002527236938" green="0.88099998235702515" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
